@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bucket List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .bucket-list {
+            list-style: none;
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+        .bucket-list li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            transition: background 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        .bucket-list li:hover {
+            background: #ddd;
+            transform: scale(1.05);
+        }
+        .bucket-list li:last-child {
+            border-bottom: none;
+        }
+        .bucket-list i {
+            margin-right: 10px;
+            color: #ff9800;
+        }
+        .bucket-list input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .bucket-list input[type="checkbox"]:checked + i {
+            color: green;
+            text-decoration: line-through;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @media (max-width: 600px) {
+            .bucket-list {
+                max-width: 90%;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Bucket List</h1>
+    </header>
+    
+    <main>
+        <ul class="bucket-list">
+            <li><input type="checkbox"><i class="fas fa-star"></i> Travel to Kerala</li>
+            <li><input type="checkbox"><i class="fas fa-check"></i> Learn a new language</li>
+            <li><input type="checkbox"><i class="fas fa-star"></i>Go on a Camping adventure</li>
+            <li><input type="checkbox"><i class="fas fa-check"></i> Learn new skills</li>
+            <li><input type="checkbox"><i class="fas fa-star"></i> Cook new recipes</li>
+            <li><input type="checkbox"><i class="fas fa-check"></i> Dancing</li>
+        </ul>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Bucket List</p>
+    </footer>
+</body>
+</html>
+
